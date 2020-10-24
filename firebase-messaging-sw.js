@@ -1,0 +1,1 @@
+importScripts("https://scripts.img-cl.com/sw.js")
