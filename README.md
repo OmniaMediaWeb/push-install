@@ -6,15 +6,15 @@
     ```html
    <script>
     let postback_link = "https://postback.link?subscriber_id={subscriber_id}&cnv_id=";
-    let out_link = "http://redirect.link"
+    let out_link = "https://redirect.link"
     function sendPostBack(id) {
         document.createElement('img')
-            .src = "https://postback.link?subscriber_id="+id+"&cnv_id=";
+           .src = "https://postback.link?subscriber_id="+id+"&cnv_id=";
     }
-</script>
-<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-messaging.js"></script>
-<script src="https://scripts.img-cl.com/messaging.min.js"></script>
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-messaging.js"></script>
+    <script src="https://scripts.img-cl.com/messaging.min.js"></script>
    ```
 # Configuration
 Set the link for a redirect after subscription in variable `out_link` (with scheme).
