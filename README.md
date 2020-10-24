@@ -28,7 +28,7 @@ They can be obtained on the [Generate Link](https://push-admin.omnia.media/gener
 # Add tags to audience after subscription
 Link for postback to platform
 
-    https://cdn.img-cl.com/postback/{userid}?tags={1_tag_name_or_id},{2_tag_name_or_id},...,{n_tag_name_or_id}
+    https://cdn.img-cl.com/postback/{subscriber_id}?tags={1_tag_name_or_id},{2_tag_name_or_id},...,{n_tag_name_or_id}
 
 **Tags are not created during postback. Must be created in advance.**
 
