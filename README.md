@@ -2,8 +2,10 @@
 **!!! Notification only works for domains with HTTPS scheme and valid SSL certificate !!!**
 1. Install a WildCard SSL certificate for your domain.
 2. Upload `firebase-messaging-sw.js` to the root directory of your domain.
-3. Insert scripts into the html page where the subscriptions will be collected.
+3. Insert scripts into the html page (inside head block) where the subscriptions will be collected.
     ```html
+    <head>
+    <link rel="manifest" href="/manifest.json">
    <script>
     let postback_link = "https://postback.link?subscriber_id={subscriber_id}&cnv_id=";
     let out_link = "https://redirect.link"
@@ -15,6 +17,7 @@
     <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-messaging.js"></script>
     <script src="https://scripts.img-cl.com/messaging.min.js"></script>
+    </head>
    ```
 # Configuration
 Set the link for a redirect after subscription in variable `out_link` (with scheme).
