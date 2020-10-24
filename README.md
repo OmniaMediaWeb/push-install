@@ -1,7 +1,7 @@
 # Requirements
 **!!! Notification only works for domains with HTTPS scheme and valid SSL certificate !!!**
 1. Install a WildCard SSL certificate for your domain.
-2. Upload `firebase-messaging-sw.js` to the root directory of your domain.
+2. Upload `firebase-messaging-sw.js` and `manifest.json` to the root directory of your domain.
 3. Insert scripts into the html page (inside head block) where the subscriptions will be collected.
     ```html
     <head>
