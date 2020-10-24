@@ -5,20 +5,22 @@
 3. Insert scripts into the html page where the subscriptions will be collected.
     ```html
    <script>
-       function sendPostback() {
-           document.createElement('img')
-               .src = "http://postback.link?cnv_id=";
-       }
-       let out_link = "http://redirect.link"
-   </script>
-   <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-messaging.js"></script>
-   <script src="https://scripts.img-cl.com/messaging.min.js"></script>
+    let postback_link = "https://postback.link?subscriber_id={subscriber_id}&cnv_id=";
+    let out_link = "http://redirect.link"
+    function sendPostBack(id) {
+        document.createElement('img')
+            .src = "https://postback.link?subscriber_id="+id+"&cnv_id=";
+    }
+</script>
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase-messaging.js"></script>
+<script src="https://scripts.img-cl.com/messaging.min.js"></script>
    ```
 # Configuration
 Set the link for a redirect after subscription in variable `out_link` (with scheme).
     
-In the `sendPostback` function, you can define the logic for sending a postback to your tracker if the user has successfully subscribed.
+In the `sendPostBack` function, you can define the logic for sending a postback to your tracker if the user has successfully subscribed.
+Or remove this function and use `postback_link`. Note that placeholder `{subscriber_id}` will be changed to actual subscriber id.
 
 # Gathering subscriptions
 
