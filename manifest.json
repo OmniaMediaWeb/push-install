@@ -1,0 +1,15 @@
+{
+  "short_name": "Messaging",
+  "name": "Messaging",
+  "description":"Messaging",
+  "start_url": "/",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "https://img-cl.com/manifest-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#000"
+}
